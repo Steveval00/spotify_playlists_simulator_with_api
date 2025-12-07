@@ -2,7 +2,7 @@
 
 # 🎵 Spotify Community Web App
 
-A Spotify-inspired web application developed for a university project. It allows users to search for songs through the Spotify API, create personalized playlists, and share them with others, building a small community around music discovery.
+A Spotify-inspired web application developed for one of my first university project. It allows users to search for songs through the Spotify API, create personalized playlists, and share them with others, building a small community around music discovery.
 
 ---
 

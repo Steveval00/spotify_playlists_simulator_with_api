@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Playlist Private</title>
+    <link rel="stylesheet" href="principale.css">
+
+    </head>
+
+    <body>
+       
+            <table class="navbar">
+                <tr>
+                    <td class = "logo">
+                        <a href="principale.html" class="home">Gestione Comunità Musicali Online</a>
+                    </td>
+                    <td>
+                        <a href="principale.html" >Playlist Private</a>
+                    </td>
+                    <td>
+                        <a href="globali.html" >Playlist Pubbliche</a>
+                    </td>
+                    <td style="width:5%">
+                        
+                        <a href="account.html" style="color:white; font-size:13px;">
+                        <figure>
+                            <img height="40px" src="profilo.png" alt="profilo"/>
+                            <figcaption id="nomeProfilo">  </figcaption>
+                        </figure>
+                        </a>
+                    </td>
+                </tr>   
+            </table>
+
+
+
+        
+        <h1 id="titoloPagina"> </h1>
+        
+        <input type="button" class="crea" id="creaplaylist" value="crea nuova playlist" onclick="makeplaylist()">     
+        <h1 id="avviso" style="display:none; margin: 0 auto;">Nessuna playlist presente</h1>
+        <input type="button" name="" class="crea" style="display:none;" id="bottoneMostraPlaylist" value="mostra playlist" onclick="cambiaTasto()">  
+          
+          <table id="mostraPlaylist" class="canzoni">
+          </table>
+        <br>
+        <div class="cerca" id="cerca" style="display:none;">
+            <input type="text" id="testo" class="ins" placeholder="Cerca canzone" onkeyup="cercacanzoni(document.getElementById('testo').value)"><br>
+                    
+        </div>
+       
+        <div id="aggiungiPlaylist" class="playlist" style=" margin:0 auto; margin-bottom: 10px; width:800px;">
+      
+            <input type="text" name="insPlaylist" id="nomeplaylist" placeholder="Nome Playlist">
+            
+            <input type="button" class="aggiungi" id="invianome" value="crea" onclick="creaplay(document.getElementById('nomeplaylist').value)">
+        </div>
+    
+        <table id="canzoni" cellspacing="0" class="canzoni">
+
+
+        </table>
+
+<br>
+
+ 
+<script type="text/javascript" src="principale.js"></script>
+    </body>
+    
+
+</html>

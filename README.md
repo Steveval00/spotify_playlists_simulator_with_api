@@ -2,7 +2,7 @@
 
 # 🎵 Spotify Community Web App
 
-A Spotify-inspired web application developed for one of my first university project. It allows users to search for songs through the Spotify API, create personalized playlists, and share them with others, building a small community around music discovery.
+A Spotify-inspired web application developed for one of my first university project. It is optimized for Desktop use. It allows users to search for songs through the Spotify API, create personalized playlists, and share them with others, building a small community around music discovery.
 
 ---
 
@@ -36,7 +36,7 @@ A Spotify-inspired web application developed for one of my first university proj
 
 > A web app that brings together music lovers by enabling song discovery, playlist creation, and sharing through an interactive and dynamic interface.
 
-## Try it online on
+## Try it online at
 
 https://spotifycommunity.netlify.app/
 

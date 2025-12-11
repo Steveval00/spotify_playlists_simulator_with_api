@@ -52,24 +52,28 @@ function glo() {
 	}
 }
 
-// richiesta delle credenziali per accesso
-const client_id = "34068d8498b648428145876d44759757";
-const client_secret = "03084cfa401344f284c2c1a9046ceed5";
-var url = "https://accounts.spotify.com/api/token";
-fetch(url, {
-	method: "POST",
-	headers: {
-		Authorization: "Basic " + btoa(`${client_id}:${client_secret}`),
-		"Content-Type": "application/x-www-form-urlencoded",
-	},
-	body: new URLSearchParams({ grant_type: "client_credentials" }),
-})
-	.then((response) => response.json())
-	.then((tokenResponse) => {
-		console.log(tokenResponse.access_token);
-		//Sarebbe opportuno salvare il token nel local storage
-		localStorage.setItem("token", tokenResponse.access_token);
-	});
+// richiesta delle credenziali per accesso tramite funzione serverless (Netlify)
+const spotifyTokenEndpoint = "/.netlify/functions/get-spotify-token";
+
+function fetchSpotifyToken() {
+	fetch(spotifyTokenEndpoint)
+		.then((response) => {
+			if (!response.ok) {
+				throw new Error("Token request failed");
+			}
+			return response.json();
+		})
+		.then((tokenResponse) => {
+			console.log(tokenResponse.access_token);
+			localStorage.setItem("token", tokenResponse.access_token);
+		})
+		.catch((error) => {
+			console.error("Errore nel recupero del token Spotify:", error);
+			alert("Errore nel recupero del token. Riprova piu tardi.");
+		});
+}
+
+fetchSpotifyToken();
 
 function profilo() {
 	// funzione per mostrare a schermo i nomi delle playlist e permettere la modifica e la creazione

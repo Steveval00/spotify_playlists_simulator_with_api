@@ -35,3 +35,9 @@ A Spotify-inspired web application developed for one of my first university proj
 ## 📚 Summary
 
 > A web app that brings together music lovers by enabling song discovery, playlist creation, and sharing through an interactive and dynamic interface.
+
+## Environment
+
+- Create a `.env` file (use `.env.example` as reference) and set `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET`.
+- In Netlify, add the same variables in Site settings -> Build & deploy -> Environment so the serverless token endpoint can authenticate with Spotify.
+- For local testing of the function endpoint, run `netlify dev` from the project root to expose `/.netlify/functions/get-spotify-token`.

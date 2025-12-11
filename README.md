@@ -36,6 +36,10 @@ A Spotify-inspired web application developed for one of my first university proj
 
 > A web app that brings together music lovers by enabling song discovery, playlist creation, and sharing through an interactive and dynamic interface.
 
+## Try it online on
+
+https://spotifycommunity.netlify.app/
+
 ## Environment
 
 - Create a `.env` file (use `.env.example` as reference) and set `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET`.
